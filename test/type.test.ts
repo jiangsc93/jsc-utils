@@ -18,7 +18,6 @@ import {
 test('isString', () => {
     expect(isString('')).toBe(true);
     expect(isString(null)).toBe(false);
-    expect(isString(2)).toBe(false);
 });
 
 test('isBoolean', () => {
