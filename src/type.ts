@@ -18,11 +18,7 @@ export type PartialDeep<T> = {
 const typeIs = (any: unknown): string => Object.prototype.toString.call(any).slice(8, -1);
 
 // 基本数据类型判断
-export const isString = (any: unknown): any is string => {
-    console.log(any, '555')
-    return typeof any === 'string';
-}
-console.log(isString(3), '++++')
+export const isString = (any: unknown): any is string => typeof any === 'string';
 export const isBoolean = (any: unknown): any is boolean => typeof any === 'boolean';
 export const isSymbol = (any: unknown): any is symbol => typeof any === 'symbol';
 export const isBigInt = (any: unknown): any is bigint => typeof any === 'bigint';
