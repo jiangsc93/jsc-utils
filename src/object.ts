@@ -1,5 +1,4 @@
 import typeIs, { AnyArray, AnyObject, isArray, isObject, isUndefined } from './type';
-
 /**
  * 判断对象是否为纯对象
  * @param {object} obj

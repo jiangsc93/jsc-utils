@@ -1,0 +1,41 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+const typeIs = (any) => Object.prototype.toString.call(any).slice(8, -1);
+// 基本数据类型判断
+const isString = (any) => typeof any === 'string';
+const isBoolean = (any) => typeof any === 'boolean';
+const isSymbol = (any) => typeof any === 'symbol';
+const isBigInt = (any) => typeof any === 'bigint';
+const isNumber = (any) => typeof any === 'number' && !Number.isNaN(any);
+const isUndefined = (any) => typeof any === 'undefined';
+const isNull = (any) => any === null;
+const isPrimitive = (any) => any === null || typeof any !== 'object';
+// 复合数据类型判断
+const isObject = (any) => typeIs(any) === 'Object';
+const isArray = (any) => Array.isArray(any);
+// eslint-disable-next-line @typescript-eslint/ban-types
+const isFunction = (any) => typeof any === 'function';
+// 对象类型判断
+const isNaN = (any) => Number.isNaN(any);
+const isDate = (any) => typeIs(any) === 'Date';
+const isError = (any) => typeIs(any) === 'Error';
+const isRegExp = (any) => typeIs(any) === 'RegExp';
+
+exports["default"] = typeIs;
+exports.isArray = isArray;
+exports.isBigInt = isBigInt;
+exports.isBoolean = isBoolean;
+exports.isDate = isDate;
+exports.isError = isError;
+exports.isFunction = isFunction;
+exports.isNaN = isNaN;
+exports.isNull = isNull;
+exports.isNumber = isNumber;
+exports.isObject = isObject;
+exports.isPrimitive = isPrimitive;
+exports.isRegExp = isRegExp;
+exports.isString = isString;
+exports.isSymbol = isSymbol;
+exports.isUndefined = isUndefined;

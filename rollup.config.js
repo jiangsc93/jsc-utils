@@ -12,14 +12,14 @@ export default {
   // },
   output: [
     {
-        dir: './dist',
+        dir: '.',
         format: 'cjs',
         entryFileNames: '[name].js',
         preserveModules: true,
         preserveModulesRoot: 'src'
     },
     {
-        dir: './dist',
+        dir: '.',
         format: 'esm',
         entryFileNames: '[name].mjs',
         preserveModules: true,
