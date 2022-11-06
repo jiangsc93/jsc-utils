@@ -1,3 +1,6 @@
-dist
+/dist
+# MacOS
+.DS_Store
 
-node_modules
+# Node.JS
+/node_modules
