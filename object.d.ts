@@ -1,4 +1,4 @@
-import typeIs, { isObject, isUndefined, isNull, isArray } from './type.mjs';
+import typeIs, { isObject, isUndefined, isNull, isArray } from './type.d.ts';
 
 /**
  * 判断对象是否为纯对象

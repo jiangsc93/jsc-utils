@@ -1,6 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import typescript from 'rollup-plugin-typescript';
+// import dts from 'rollup-plugin-dts';
 // import json from 'rollup/plugin-json';
 // import pkg from './package.json';
 
@@ -24,7 +25,7 @@ export default {
         entryFileNames: '[name].mjs',
         preserveModules: true,
         preserveModulesRoot: 'src'
-    }
+    },
   ],
   plugins: [ // 打包插件
     resolve(), // 查找和打包node_modules中的第三方模块

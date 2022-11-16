@@ -1,4 +1,4 @@
-import typeIs, { AnyArray, AnyObject, isArray, isObject, isUndefined } from './type';
+import typeIs, { AnyArray, AnyObject, isArray, isObject, isUndefined, isNull } from './type';
 /**
  * 判断对象是否为纯对象
  * @param {object} obj
@@ -42,7 +42,8 @@ export const objectEach = <O extends AnyObject>(
 };
 
 const merge = (map: Map<AnyObject | AnyArray, AnyObject | AnyArray>, source: unknown, target: unknown): unknown => {
-    if (isUndefined(target)) return source;
+    // 过滤掉源对象为null和undefined的情况
+    if (isUndefined(target) || isNull(target)) return source;
 
     const sourceType = typeIs(source);
     const targetType = typeIs(target);

@@ -40,7 +40,8 @@ const objectEach = (obj, iterator) => {
     }
 };
 const merge = (map, source, target) => {
-    if (type.isUndefined(target))
+    // 过滤掉源对象为null和undefined的情况
+    if (type.isUndefined(target) || type.isNull(target))
         return source;
     const sourceType = type["default"](source);
     const targetType = type["default"](target);
