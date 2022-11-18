@@ -42,12 +42,13 @@ export const objectEach = <O extends AnyObject>(
 };
 
 const merge = (map: Map<AnyObject | AnyArray, AnyObject | AnyArray>, source: unknown, target: unknown): unknown => {
-    // 过滤掉源对象为null和undefined的情况
+    // 过滤掉目标对象为null和undefined的情况
     if (isUndefined(target) || isNull(target)) return source;
 
     const sourceType = typeIs(source);
     const targetType = typeIs(target);
 
+    // 如果源对象 和 目标对象 的类型不一致
     if (sourceType !== targetType) {
         if (isArray(target)) return merge(map, [], target);
         if (isObject(target)) return merge(map, {}, target);
